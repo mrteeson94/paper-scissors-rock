@@ -7,6 +7,7 @@ Javascript based web game mini-project
 ----- Content -----
 
 HTML: to provide an interface for users while playing the game
+
 Javascript: responsible for all the game's logic
 
 ----- Progression -----
