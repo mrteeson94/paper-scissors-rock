@@ -1,2 +1,2 @@
 # paper-scissors-rock
-Javascript based web game mini-project
+Javascript based web game mini-project 
