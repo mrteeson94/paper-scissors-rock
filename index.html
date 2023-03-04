@@ -4,11 +4,48 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
          <meta http-equiv="X-UA-Compatible" content="ie=edge">
             <meta charset="UTF-8">
+            <!-- font google -->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
          <title>Scissors Paper Rock Game!</title>
+         <link rel="stylesheet" href="style.css">
     </head>
-
     <body>
-        <h1>Press F12 key to see magic</h1>
-        <script src="index.js" defer></script>
+        <div id="container">
+        <!-- header containing just the title -->
+            <div id="header">
+                <h1 id="titlepage">Scissors Paper Rock Game</h1>
+            </div>
+            <!-- 1st content grid:contains button options for user to play the game-->
+            <div id="body">
+                <div class="display-options">
+                    <div class="options">
+                        <!-- scissors grid: img + text -->
+                        <div class="single-button-grid" id="scissors" onclick="showMessage()">
+                            <img class="picture" src="./assets/scissors.svg" alt="scissor option"  >
+                            <p>Scissors</p>
+                        </div>
+                        <!-- Paper grid: img + text  -->
+                        <div class="single-button-grid" id="paper">
+                            <img class="picture" src="./assets/paper.svg" alt="paper option">
+                            <p>Paper</p>
+                        </div>
+                        <!-- Rock grid: img + text  -->
+                        <div class="single-button-grid" id="rock">
+                            <img class="picture" src="./assets/rock.svg" alt="rock option">
+                            <p>Rock</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 2nd content grid: contains result of user & bot + display winner-->
+                <div class="display-options">
+                    <p>Final Result displayed here</p>
+                </div>
+                <script src="index.js" defer></script>
+            </div>    
+
+            <footer> Project Copyright © mrteeson94</footer>
+        </div>
     </body>
 </html>
