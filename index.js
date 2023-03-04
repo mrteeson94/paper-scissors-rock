@@ -1,98 +1,110 @@
 // //main scope 
 // game();
 
-function showMessage(e) 
+function playRound(input) 
 {
-    alert("clicked"); 
+    //selected user answer
+    const selectedAnswer = document.getElementById(input).id
+    console.log(selectedAnswer);
+    const compSelect = getComputerChoice();
+
+    //return the result of win or lose per round from gameRound() function
+    let result = gameRound(selectedAnswer, compSelect);
+
+    //update result display
+    let resultDisplay = document.querySelector('.final-text');
+    if (result === 'win'){
+        resultDisplay.innerHTML = 'You have won this round! You live to fight for another round';
+    }
+    else if (result === 'tie'){
+        resultDisplay.innerHTML = 'Draw this round!';
+
+    }
+    else
+    {
+        resultDisplay.innerHTML = 'You have lost this round. Be better!';
+
+    }
+    console.log(resultDisplay, typeof resultDisplay)
+
+
+
+
 }
 
+
 // //1. The function will return random string of either 'rock || paper || scissors'
-// function getComputerChoice() {
-//     //Store the strings in array
-//     const selectionArray = ['rock','paper','scissors']; 
-//     // variable to store random selected string of 'ROCK', 'Paper', 'SCISSORS'
-//     let compChoice = selectionArray[Math.floor(Math.random()*selectionArray.length)];
-//     //return the selected string
-//     console.log(compChoice);
-//     return compChoice;
-// }
-// //function to get user input from prompt
-// function getPlayerChoice(userInput) {
-//     if (userInput === null || userInput === undefined ){
-//         alert("Please choose either 'scissors' OR 'paper' OR 'rock' ")
-//         userInput = null;
-//     }
-//     else{
-//         //convert input string to lowercase
-//         userInput = userInput.toLowerCase();    
-//         //return the value
-//         return userInput;
-//     }
-//     return userInput;
-// }
+function getComputerChoice() {
+    //Store the strings in array
+    const selectionArray = ['rock','paper','scissors']; 
+    // variable to store random selected string of 'ROCK', 'Paper', 'SCISSORS'
+    let compChoice = selectionArray[Math.floor(Math.random()*selectionArray.length)];
+    //return the selected string
+    console.log(compChoice);
+    return compChoice;
+}
 
 // //2. Now implement a round of the game function that takes 2 parameters (playerSelect & compSelect)
-// // playerSelect parameter should take any input (case-sensitive) 
-// function playRound(compSelect, playerSelect) {
-//     //checks paperselection with computer selection and determine the winner of the round
-//     switch(playerSelect)
-//     {
-//         case 'rock':
-//                 if (compSelect === 'scissors'){
-//                     alert("Bot picked scissors, you win!")
-//                     return result = 'win'
-//                 }
-//                 else if (compSelect === 'paper') {
-//                     alert("Bot picked paper, you lose!")
-//                     return result = 'lose'
-//                 }
-//                 else
-//                 {
-//                     alert("Bot picked rock, it's a tie!")
-//                     return result = 'tie'
-//                 }
-//                 break;
-//         case 'paper':
-//             if (compSelect === 'rock'){
-//                 alert("Bot picked rock, you win!")
-//                 return result = 'win'
-//             }
-//             else if (compSelect === 'scissors') {
-//                 alert("Bot picked scissors, you lose!")
-//                 return result = 'lose'
-//             }
-//             else
-//             {
-//                 alert("Bot picked paper, it's a tie!")
-//                 return result = 'tie'
-//             }
-//             break;
+function gameRound(selectedAnswer, compSelect) {
+    //checks paperselection with computer selection and determine the winner of the round
+    switch(selectedAnswer)
+    {
+        case 'rock':
+                if (compSelect === 'scissors'){
+                    console.log("Bot picked scissors, you win!")
+                    return result = 'win'
+                }
+                else if (compSelect === 'paper') {
+                    console.log("Bot picked paper, you lose!")
+                    return result = 'lose'
+                }
+                else
+                {
+                    console.log("Bot picked rock, it's a tie!")
+                    return result = 'tie'
+                }
+                break;
+        case 'paper':
+            if (compSelect === 'rock'){
+                console.log("Bot picked rock, you win!")
+                return result = 'win'
+            }
+            else if (compSelect === 'scissors') {
+                console.log("Bot picked scissors, you lose!")
+                return result = 'lose'
+            }
+            else
+            {
+                console.log("Bot picked paper, it's a tie!")
+                return result = 'tie'
+            }
+            break;
 
-//             case 'scissors':
-//                 if (compSelect === 'paper'){
-//                     alert("Bot picked paper, you win!")
-//                     return result = 'win'
-//                 }
-//                 else if (compSelect === 'rock') {
-//                     alert("Bot picked rock, you lose!")
-//                     return result = 'lose'
-//                 }
-//                 else
-//                 {
-//                     alert("Bot picked scissors, it's a tie!")
-//                     return result = 'tie'
-//                 }
-//                 break;
-//              default:
-//                 alert('Please type one of the following choices to play the game: rock OR paper OR scissors');
-//                 return result = 'lose'
-//                 break;
-//     }
-//     return result;
-// }
+            case 'scissors':
+                if (compSelect === 'paper'){
+                    console.log("Bot picked paper, you win!")
+                    return result = 'win'
+                }
+                else if (compSelect === 'rock') {
+                    console.log("Bot picked rock, you lose!")
+                    return result = 'lose'
+                }
+                else
+                {
+                    console.log("Bot picked scissors, it's a tie!")
+                    return result = 'tie'
+                }
+                break;
+             default:
+                console.log('Please type one of the following choices to play the game: rock OR paper OR scissors');
+                return result = 'lose'
+                break;
+    }
+    return result;
+}
 
-// // 3. Write a NEW function called game(). Call the playRound function inside of this one to play a 5 
-// // round game that keeps score and reports a winner or loser at the end.
+// 3. Write a NEW function called game(). Call the playRound function inside of this one to play a 5 
+// round game that keeps score and reports a winner or loser at the end.
 // function game() {
 //     //FOR LOOP to play 5 game total
 //     let playerCount = 0;

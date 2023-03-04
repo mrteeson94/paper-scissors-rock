@@ -22,17 +22,17 @@
                 <div class="display-options">
                     <div class="options">
                         <!-- scissors grid: img + text -->
-                        <div class="single-button-grid" id="scissors" onclick="showMessage()">
+                        <div class="single-button-grid" id="scissors" onclick="playRound(this.id)">
                             <img class="picture" src="./assets/scissors.svg" alt="scissor option"  >
                             <p>Scissors</p>
                         </div>
                         <!-- Paper grid: img + text  -->
-                        <div class="single-button-grid" id="paper">
+                        <div class="single-button-grid" id="paper" onclick="playRound(this.id)">
                             <img class="picture" src="./assets/paper.svg" alt="paper option">
                             <p>Paper</p>
                         </div>
                         <!-- Rock grid: img + text  -->
-                        <div class="single-button-grid" id="rock">
+                        <div class="single-button-grid" id="rock" onclick="playRound(this.id)">
                             <img class="picture" src="./assets/rock.svg" alt="rock option">
                             <p>Rock</p>
                         </div>
@@ -40,7 +40,7 @@
                 </div>
                 <!-- 2nd content grid: contains result of user & bot + display winner-->
                 <div class="display-options">
-                    <p>Final Result displayed here</p>
+                    <p class="final-text">Final Result displayed here</p>
                 </div>
                 <script src="index.js" defer></script>
             </div>    
