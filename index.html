@@ -19,7 +19,7 @@
             </div>
             <!-- 1st content grid:contains button options for user to play the game-->
             <div id="body">
-                <div class="display-options">
+                <div class="display-options-grid">
                     <div class="options">
                         <!-- scissors grid: img + text -->
                         <div class="single-button-grid" id="scissors" onclick="playRound(this.id)">
@@ -39,13 +39,33 @@
                     </div>
                 </div>
                 <!-- 2nd content grid: contains result of user & bot + display winner-->
-                <div class="display-options">
-                    <p class="final-text">Final Result displayed here</p>
+                <div class="display-result">
+                    <!-- 1st flex container -->
+                    <h2>Outcome:</h2>
+                    <!-- 2nd flex container -->
+                    <div class="selected-result-grid">
+                        <div class="single-button-grid" id="userAnswer">
+                            <img class="picture" id="userImg" src="./assets/questionMark.svg" alt="Human option"  >
+                            <p>Your pick</p>
+                        </div>
+                        <p id="vs-text">vs.</p>  
+                        <div class="single-button-grid" id="botAnswer">
+                            <img class="picture" id="botImg" src="./assets/questionMark.svg" alt="Bot option"  >
+                            <p>Bot pick</p>
+                        </div>
+                    </div>
+                    <!-- 3rd flex container -->
+                    <p class="final-text">Your result will be shown here!</p>
+                    <div class="score-counter">
+                        <p class="user-score">0</p>
+                            <p>:</p>
+                        <p class="bot-score">0</p>
+                    </div>
                 </div>
                 <script src="index.js" defer></script>
             </div>    
 
-            <footer> Project Copyright © mrteeson94</footer>
+            <footer> Project Copyright © <a href="https://github.com/mrteeson94">mrteeson94</a></footer>
         </div>
     </body>
 </html>

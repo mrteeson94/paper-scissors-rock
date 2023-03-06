@@ -2,12 +2,13 @@ body {
     font-family: 'VT323', monospace;
     color: #EDF2EB;
     background-color: #D9AD2B;
-    margin: 0;
+    margin:0;
     padding:0;
 }
 #container {
     position: relative;
     min-height: 100vh;
+    margin: 0;
 }
 
 #header {
@@ -22,7 +23,8 @@ body {
 }
 
 #body {
-    padding: 2.5rem;
+    padding: 1.5rem;
+    padding-top: 0;
 }
 
 footer {
@@ -34,8 +36,7 @@ footer {
     font-size: 0.65em;
     background-color: #D94929;
 } 
-
-.display-options {
+.display-options-grid {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -48,7 +49,6 @@ footer {
     display: flex;
     gap: 2em;
     justify-content: center;
-
 }
 
 .single-button-grid {
@@ -61,4 +61,29 @@ footer {
     min-width: 5em;
     max-width: 15em;
     min-height: auto;
+}
+
+.display-result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.selected-result-grid {
+    display: flex;
+    gap: 2em;
+}
+
+#vs-text {
+    display: flex;
+    font-size: x-large;
+    align-items: center;
+}
+
+.score-counter {
+    display: flex;
+    gap: 1em;
+    font-size: 1em;
+    padding-bottom: 1em;
 }

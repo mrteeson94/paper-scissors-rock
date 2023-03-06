@@ -3,30 +3,61 @@
 
 function playRound(input) 
 {
-    //selected user answer
+    //SELECT user answer
     const selectedAnswer = document.getElementById(input).id
     console.log(selectedAnswer);
     const compSelect = getComputerChoice();
 
-    //return the result of win or lose per round from gameRound() function
+    //RETURN the result of win or lose per round from gameRound() function
     let result = gameRound(selectedAnswer, compSelect);
 
-    //update result display
+    //UPDATE result display
+
+    //1.UPDATE default image of result
+    //CHANGE user selected image choice w/ selectedAnswer var
+    document.getElementById("userImg").src = "./assets/" + `${selectedAnswer}` + ".svg";
+    //CHANGE bot selected image choice w/ compSelect var
+    document.getElementById("botImg").src = "./assets/" + `${compSelect}` + ".svg";
+
+    //2. ASSIGN var to user and bot score elements
+    let userScore = document.querySelector('.user-score');
+    let botScore = document.querySelector('.bot-score');
+    console.log(userScore, typeof userScore);
+    console.log(botScore, typeof botScore);
+        
+
+    //3. UPDATE final outcome text 
     let resultDisplay = document.querySelector('.final-text');
     if (result === 'win'){
-        resultDisplay.innerHTML = 'You have won this round! You live to fight for another round';
+        resultDisplay.innerHTML = 'You have won this round!';
+        let userScoreUpdate = parseInt(userScore.textContent) + 1;
+        userScore.innerHTML = userScoreUpdate;
     }
     else if (result === 'tie'){
         resultDisplay.innerHTML = 'Draw this round!';
-
     }
     else
     {
-        resultDisplay.innerHTML = 'You have lost this round. Be better!';
+        resultDisplay.innerHTML = 'You have lost this round!';
+        let botScoreUpdate = parseInt(botScore.textContent) + 1;
+        botScore.innerHTML = botScoreUpdate;
 
     }
     console.log(resultDisplay, typeof resultDisplay)
+    //GAME OVER and reset count
+    if ( userScore.innerHTML === '3' )
+    {
+        resultDisplay.innerHTML = 'You have won majority of the rounds, you are the winner!';
+        userScore.innerHTML = '0';
+        botScore.innerHTML = '0';
+    }
 
+    else if (botScore.innerHTML === '3')
+    {
+        resultDisplay.innerHTML = 'Bot has won majority of the rounds, you lose!';
+        userScore.innerHTML = '0';
+        botScore.innerHTML = '0';
+    }
 
 
 
@@ -35,18 +66,18 @@ function playRound(input)
 
 // //1. The function will return random string of either 'rock || paper || scissors'
 function getComputerChoice() {
-    //Store the strings in array
+    //STORE the strings in array
     const selectionArray = ['rock','paper','scissors']; 
     // variable to store random selected string of 'ROCK', 'Paper', 'SCISSORS'
     let compChoice = selectionArray[Math.floor(Math.random()*selectionArray.length)];
-    //return the selected string
+    //RETURN the selected string
     console.log(compChoice);
     return compChoice;
 }
 
 // //2. Now implement a round of the game function that takes 2 parameters (playerSelect & compSelect)
 function gameRound(selectedAnswer, compSelect) {
-    //checks paperselection with computer selection and determine the winner of the round
+    //CHECKS paperselection with computer selection and determine the winner of the round
     switch(selectedAnswer)
     {
         case 'rock':
@@ -112,9 +143,9 @@ function gameRound(selectedAnswer, compSelect) {
 //     for (let i = 1; i <= 5; i++)
 //     {
 //         const compSelect = getComputerChoice();
-//         let userInput = prompt( 'Round '+ i + ': ' +'Scissors, paper, rock!(choose one): ');
 //         let playerSelect = getPlayerChoice(userInput);
 //         let result = playRound(compSelect,playerSelect);
+        
 //         if (result === 'win')
 //         {
 //             playerCount++;
