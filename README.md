@@ -35,6 +35,7 @@ Plans for improvement:
 
 
 ====== LATEST UPDATE ======
+
 6/03/2023 - Implementing a full game (HTML, CSS & JS)
 - Git: merged ui-phase branch into origin main.
 - HTML: restructured body-divs container of the result portion of the game to now display image of user and bot choice and text of winner + score count.
