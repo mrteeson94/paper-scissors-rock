@@ -49,6 +49,7 @@ footer {
     display: flex;
     gap: 2em;
     justify-content: center;
+    height: 12em;
 }
 
 .single-button-grid {
@@ -57,11 +58,23 @@ footer {
     justify-content: center;
     align-items: center;
 }
+
 .picture {
     min-width: 5em;
     max-width: 15em;
     min-height: auto;
 }
+
+/* TODO: Implement float hover effect of the img options */
+/* .options.single-button-grid{
+    margin-right: 1em;
+    transition: margin 0.2s ease-in-out;
+}
+
+.options.single-button-grid:hover {
+    margin-top: -1em;
+    cursor: grab;
+} */
 
 .display-result {
     display: flex;
