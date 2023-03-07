@@ -24,7 +24,7 @@ Plans for improvement:
 * validation check of the input (check if null || undefined || unrelated answer) to leave the loop earlier (save time and RAM)
 * simple html and css webpage interface needed (will need to revisit DOM manipulation)
 
-## UPDATE 
+## UPDATE version 1.0
 
 27/02/2023 - Implementing UI (HTML and CSS)
 * Git: branch off from main repo to work on UI of the webgame.
@@ -37,7 +37,7 @@ Plans for improvement:
 * Will need to implement a counter logic in JS to portray a complete game of paper-scissors-rock, best round of 5.
 
 
-## LATEST UPDATE
+## LATEST UPDATE version 1.1
 
 6/03/2023 - Implementing a full game (HTML, CSS & JS)
 * Git: merged ui-phase branch into origin main.
