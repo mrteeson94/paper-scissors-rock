@@ -46,7 +46,7 @@ Plans for improvement:
 * JS: Implemented a full best of 5 game round via the use of IF-ELSE statements and more DOM reference to body-result-grid.
 
 Plans for improvement: Will be mostly css
-* Currently option grid is not centered which is more evident in wider screens *PRIORITY*
+* *PRIORITY* : Currently option grid is not centered which is more evident in wider screens 
 * Implement a dynamic float animation when user hover over the choice images.
 * When user select a choice, the page should automatically go down to the outcome section.
 * Have an option represented by an 'up-arrow' to allow users to go back up of the page to the selection grid.
