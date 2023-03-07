@@ -103,6 +103,10 @@ footer {
     padding-bottom: 1em;
 }
 
+.final-text {
+    font-size: 1.5em;
+}
+
 /* Changes view size of header title and body images for tablet and phone respectively*/
 @media only screen and (max-width: 550px){
         #header {
@@ -172,7 +176,4 @@ footer {
     font-size: 1em;
     padding-bottom: 1em;
 }
-
-
-
 }
