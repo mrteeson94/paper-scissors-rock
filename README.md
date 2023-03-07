@@ -3,7 +3,7 @@
 
 ## Description 
 
-Vanilla Javascript web based game mini-project, will a heavy focus on applying DOM references between game logic and UI elements on the webpage to make
+Vanilla Javascript web based game mini-project, with a heavy focus on applying DOM references between game logic and UI elements on the webpage to make
 paper-scissors-rock work and look pretty at the same time!
 
 ## Content
