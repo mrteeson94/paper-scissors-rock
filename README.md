@@ -8,7 +8,8 @@ paper-scissors-rock work and look pretty at the same time!
 
 ## Content
 
-* HTML: to provide an interface for users while playing the game
+* HTML: provides the skeleton backbone of the interface for users while playing the game
+* CSS: Making the game more appealing to your eyes and *hopefully* not burn them
 
 * Javascript: responsible for all the game's logic
 
