@@ -1,4 +1,5 @@
 # paper-scissors-rock
+![Alt Text](https://github.com/mrteeson94/paper-scissors-rock/blob/main/demo.gif)
 
 ## Description 
 
