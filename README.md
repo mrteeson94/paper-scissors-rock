@@ -1,15 +1,17 @@
 # paper-scissors-rock
+![Alt Text](https://github.com/mrteeson94/paper-scissors-rock/blob/main/demo.gif)
 
 ## Description 
 
-Vanilla Javascript based web game mini-project, will a heavy focus on applying DOM references between game logic and UI elements on the webpage to make
+Vanilla Javascript web based game mini-project, with a heavy focus on applying DOM references between game logic and UI elements on the webpage to make
 paper-scissors-rock work and look pretty at the same time!
 
 ## Content
 
-HTML: to provide an interface for users while playing the game
+* HTML: provides the skeleton backbone of the interface for users while playing the game
+* CSS: Making the game more appealing to your eyes and *hopefully* not burn them
 
-Javascript: responsible for all the game's logic
+* Javascript: responsible for all the game's logic
 
 ## Progression
 
@@ -22,7 +24,7 @@ Plans for improvement:
 * validation check of the input (check if null || undefined || unrelated answer) to leave the loop earlier (save time and RAM)
 * simple html and css webpage interface needed (will need to revisit DOM manipulation)
 
-## UPDATE 
+## UPDATE version 1.0
 
 27/02/2023 - Implementing UI (HTML and CSS)
 * Git: branch off from main repo to work on UI of the webgame.
@@ -35,7 +37,7 @@ Plans for improvement:
 * Will need to implement a counter logic in JS to portray a complete game of paper-scissors-rock, best round of 5.
 
 
-## LATEST UPDATE
+## LATEST UPDATE version 1.1
 
 6/03/2023 - Implementing a full game (HTML, CSS & JS)
 * Git: merged ui-phase branch into origin main.
@@ -44,6 +46,7 @@ Plans for improvement:
 * JS: Implemented a full best of 5 game round via the use of IF-ELSE statements and more DOM reference to body-result-grid.
 
 Plans for improvement: Will be mostly css
+* *PRIORITY* : Currently option grid is not centered which is more evident in wider screens 
 * Implement a dynamic float animation when user hover over the choice images.
 * When user select a choice, the page should automatically go down to the outcome section.
 * Have an option represented by an 'up-arrow' to allow users to go back up of the page to the selection grid.
