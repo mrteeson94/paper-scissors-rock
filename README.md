@@ -8,9 +8,9 @@ paper-scissors-rock work and look pretty at the same time!
 
 ## Content
 
-HTML: to provide an interface for users while playing the game
+* HTML: to provide an interface for users while playing the game
 
-Javascript: responsible for all the game's logic
+* Javascript: responsible for all the game's logic
 
 ## Progression
 
